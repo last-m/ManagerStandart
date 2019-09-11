@@ -1,0 +1,74 @@
+.description{
+    position: absolute;
+    top: 30%;
+    margin: auto;
+    padding: 2em;
+}
+.description h1{
+    color:#F97300 ;
+}
+.description p{
+    color:#666;
+    font-size: 20px;
+    width: 50%;
+    line-height: 1.5;
+}
+.description button{
+    border:1px  solid #F97300;
+    background:#F97300;
+    color:#fff;
+}
+
+input {
+    background-image: url(https://img.icons8.com/color/72/calendar.png);
+    background-repeat: no-repeat; /*Убираем повтор изображения*/
+    background-position: 4px; /*Позиционируем*/
+    outline: none; /*убираем стандартную обводку браузера*/
+    -moz-border-radius: 5px; /*закругляем углы для Mozilla*/
+    -webkit-border-radius: 5px; /*закругляем углы для Chrome, Safari*/
+    border-radius: 5px; /*закругляем углы для остальных браузеров*/
+    padding-left: 50px; /*отступ слева от ввода, чтобы текст не был на картинке(выбирать по размеру картинки)*/
+    height: 30px; /*высота строки ввода*/
+    font-size: 15px; /*размер шрифта*/
+}
+
+@import url(https://fonts.googleapis.com/css?family=Open+Sans);
+
+body {
+    background: #111;
+    font-family: "Open Sans",  Impact;
+}
+
+.area {
+    text-align: center;
+    font-size: 1.5em;
+    color: #fff;
+    letter-spacing: -2px;
+
+    text-transform: uppercase;
+    animation: blur .75s ease-out infinite;
+    text-shadow: 0px 0px 5px #fff, 0px 0px 7px #fff;
+}
+
+@keyframes blur {
+    from {
+        text-shadow:0px 0px 10px #fff,
+        0px 0px 10px #fff,
+        0px 0px 25px #fff,
+        0px 0px 25px #fff,
+        0px 0px 25px #fff,
+        0px 0px 25px #fff,
+        0px 0px 25px #fff,
+        0px 0px 25px #fff,
+        0px 0px 50px #fff,
+        0px 0px 50px #fff,
+        0px 0px 50px #7B96B8,
+        0px 0px 150px #7B96B8,
+        0px 10px 100px #7B96B8,
+        0px 10px 100px #7B96B8,
+        0px 10px 100px #7B96B8,
+        0px 10px 100px #7B96B8,
+        0px -10px 100px #7B96B8,
+        0px -10px 100px #7B96B8;
+    }
+}

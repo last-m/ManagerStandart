@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+<head lang="ru">
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Отчет по Выполненным задачам Технического отдела</title>
+
+    <link href="css/application.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
+
+
+</head>
+<body>
+    <div id="app" class="container-fluid">
+        <div class="row">
+            <span id="alert-warning">
+              <div class="alert alert-warning" role="alert">Выберите ответственного и период - после чего можно сформировать отчет !</div>
+            </span>
+
+            <table class="table">
+                <tr>
+                    <td><a class="btn btn-block btn-lg btn-info" onclick="app.addSelectUser();" id="btn_manager">Выбрать ответственного</a></td>
+                    <td align="center"><input type="month" name="month_input" id="month_input"></td>
+                    <td><a class="btn btn-block btn-lg btn-warning" onclick="app.runGeneration();" id="btn_generation">Сформировать</a></td>
+                </tr>
+
+                <tr>
+                    <td colspan="3">
+                        <table class="table">
+                            <div class="alert alert-success" id="sum-tasks" role="alert"></div>
+                        </table>
+                    </td>
+                </tr>
+                <tr>
+                    <td colspan="3">
+                        <span id="table-deals">
+
+                        </span>
+                    </td>
+                </tr>
+            </table>
+        </div>
+    </div>
+
+
+
+
+    <script type="text/javascript" src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+
+    <script type="text/javascript" src="js/application.js"></script>
+    <script src="//api.bitrix24.com/api/v1/"></script>
+
+
+
+
+    <script>
+
+        $(document).ready(function () {
+
+            BX24.init(function(){
+                app.saveFrameWidth();
+                app.dealСategory(); // Получаем все стадии сделок
+            });
+        });
+    </script>
+
+</body>
+</html>
